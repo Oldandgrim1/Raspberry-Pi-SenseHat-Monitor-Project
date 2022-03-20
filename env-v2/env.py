@@ -4,6 +4,7 @@ from sense_hat import SenseHat
 from time import asctime, sleep
 import subprocess
 import sys
+import csv
 sys.stdout.reconfigure(encoding='utf-8') ##Encodes stdout to utf-8 which removes preceeding 'b' from script output.
 
 ##Code starts here.
