@@ -13,9 +13,9 @@ sense = SenseHat()
 sense.set_rotation(180)
 
 while True:
-    #For the below subproccess runs I would suggest you create a user that has limited sudo access to only run 'vcgencmd measure_temp'
+    #For the below subprocess runs I would suggest you create a user that has limited sudo access to only run 'vcgencmd measure_temp'
     #Note that you can add or remove scripts from below then remove the associated variables.
-    #You can remove subprrocess.run lines and associated code lines depending on how many raspberry pis you own and how many you want to get temperature data from.
+    #You can remove subprocess.run lines and associated code lines depending on how many raspberry pis you own and how many you want to get temperature data from.
     log = open("/home/pi/env-v2.csv",'a+')
     pi1 = subprocess.run(['/home/pi/code/env-v2/pi4temp.sh'],universal_newlines= True, capture_output= True) 
     pi2 = subprocess.run(['/home/pi/code/env-v2/pi1temp.sh'],universal_newlines= True, capture_output= True)
